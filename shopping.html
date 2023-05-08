@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Shopping</title>
+    <link rel="icon" href="./Images/favicon.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/media.css">
+</head>
+<body>
+    <!-- Start Navbar -->
+    <nav id="navbar">
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-between">
+                <a href="./index.html" class="d-flex align-items-center justify-content-between gap-10 logo">
+                    <img src="./Images/logo.png" alt="logo">
+                    <p>Minimal <span>Shop</span>ping</p>
+                </a>
+                <div class="user">
+                    <a href="./loginpage.html"><i class='bx bx-user'></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Start Shopping product -->
+    <section class="shopping">
+        <div class="container">
+            <div class="product-shopping grid">
+                <div class="product-shopping_img" id="product-shopping_img" data-aos="zoom-in-up">
+                    <img src="" alt="item" id="item">
+                </div>
+                <div class="product-shopping_content mt-10" data-aos="zoom-in-up">
+                    <span class="new-product">New!</span>
+                    <h3 class="product-title">Cotton Sweatshirt</h3>
+                    <h4 class="product-price">$1,299</h4>
+                    <p class="product-brand">Brand: H &amp; M</p>
+                    <ul class="product-details">
+                        <li>Relaxed Fit</li>
+                        <li>Crew Neck</li>
+                        <li>Drop Shoulder Sleeves</li>
+                        <li>Elasticated Neckline , Hemline and Cuffs</li>
+                        <li>Made in Russia</li>
+                    </ul>
+                    <p class="product-availbilty">Stock &amp; Availability: 10</p>
+                    <span class="product-size">Size</span>
+                    <ul class="size-list d-flex align-items-center">
+                        <li class="active item-size">XS</li>
+                        <li class="item-size">S</li>
+                        <li class="item-size">M</li>
+                        <li class="item-size">L</li>
+                    </ul>
+                    <button class="button cart-btn d-flex align-items-center justify-content-center">Add To Cart <i class='bx bx-cart'></i></button>
+                    <p class="add-product d-flex align-items-center justify-content-center">Added To Cart</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Scroll to top -->
+    <div class="backToTop" id="scrollup">
+        <a href="#banner"><i class='bx bx-up-arrow-alt'></i></a>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="./script.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

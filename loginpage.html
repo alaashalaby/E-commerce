@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Shopping</title>
+    <link rel="icon" href="./Images/favicon.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./CSS/all.min.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/media.css">
+</head>
+<body>
+    <!-- Start Navbar -->
+    <nav id="navbar">
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-between">
+                <a href="./index.html" class="d-flex align-items-center justify-content-between gap-10 logo">
+                    <img src="./Images/logo.png" alt="logo">
+                    <p>Minimal <span>Shop</span>ping</p>
+                </a>
+                <div class="user">
+                    <a href="./loginpage.html"><i class='bx bx-user'></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Start Section Login  -->
+    <section class="login">
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="form-box position-relative">
+                    <h4 class="text-center">Hello Again!</h4>
+                    <p class="welcome-text text-center">Welcome Back You’ve Been Missed!</p>
+                    <p class="login_description">To login enter Your email address and password</p>
+                    <form action="" class="mt-40" id="login-form">
+                        <div class="input-box position-relative">
+                            <i class='bx bxs-envelope' id="input-icon"></i>
+                            <input type="email" name="useremail" id="useremail" placeholder="Email Address">
+                        </div>
+                        <div class="input-box position-relative">
+                            <i class='fas fa-eye-slash' id="login_eye"></i>
+                            <input type="password" name="userpass" id="userpass" placeholder="Password">
+                        </div>
+                        <div class="check-box">
+                            <label for="usercheck">
+                                <input type="checkbox" name="usercheck" id="usercheck" checked="checked">
+                                Remember Me
+                            </label>
+                        </div>
+                        <div class="input-button d-flex align-items-center justify-content-center mt-40">
+                            <button type="submit" class="button" id="submit-btn">Login</button>
+                        </div>
+                    </form>
+                    <p id="error-msg"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Scroll to top -->
+    <div class="backToTop" id="scrollup">
+        <a href="#banner"><i class='bx bx-up-arrow-alt'></i></a>
+    </div>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="./script.js"></script>
+    <script>
+        const form = document.querySelector('form');
+        const emailInput = document.getElementById('useremail');
+        const passwordInput = document.getElementById('userpass');
+        const togglePasswordBtn = document.getElementById('login_eye');
+        const errorMsg = document.getElementById("error-msg");
+
+        form.addEventListener('submit' , (e)=>{
+            e.preventDefault();
+            if(emailInput.value.trim == "" || passwordInput.value.trim == ""){
+                errorMsg.textContent = "Please Enter Both Email & Password";
+                return;
+            }
+            if (!validateEmail(emailInput.value)) {
+                errorMsg.textContent = 'Invalid Email Format.';
+                return;
+            }
+            if (passwordInput.value.length < 8) {
+                errorMsg.textContent = 'Password must be at least 8 characters long.';
+                return;
+            }
+            alert('Login successful!');
+            });
+            
+            togglePasswordBtn.addEventListener('click', () => {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            togglePasswordBtn.classList.toggle('fa-eye-slash');
+            togglePasswordBtn.classList.toggle('fa-eye');
+            });
+            
+            function validateEmail(email) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+            }
+    </script>
+</body>
+</html>
