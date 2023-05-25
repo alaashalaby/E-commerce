@@ -64,41 +64,5 @@
     </div>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="./script.js"></script>
-    <script>
-        const form = document.querySelector('form');
-        const emailInput = document.getElementById('useremail');
-        const passwordInput = document.getElementById('userpass');
-        const togglePasswordBtn = document.getElementById('login_eye');
-        const errorMsg = document.getElementById("error-msg");
-
-        form.addEventListener('submit' , (e)=>{
-            e.preventDefault();
-            if(emailInput.value.trim == "" || passwordInput.value.trim == ""){
-                errorMsg.textContent = "Please Enter Both Email & Password";
-                return;
-            }
-            if (!validateEmail(emailInput.value)) {
-                errorMsg.textContent = 'Invalid Email Format.';
-                return;
-            }
-            if (passwordInput.value.length < 8) {
-                errorMsg.textContent = 'Password must be at least 8 characters long.';
-                return;
-            }
-            alert('Login successful!');
-            });
-            
-            togglePasswordBtn.addEventListener('click', () => {
-            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-            passwordInput.setAttribute('type', type);
-            togglePasswordBtn.classList.toggle('fa-eye-slash');
-            togglePasswordBtn.classList.toggle('fa-eye');
-            });
-            
-            function validateEmail(email) {
-            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return regex.test(email);
-            }
-    </script>
 </body>
 </html>
