@@ -176,8 +176,7 @@ nav .user a i{
 }
 /* Start Product */
 .product{
-    padding-top: var(--paddingTop);
-    padding-bottom: var(--paddingBottom);
+    padding:50px 0;
 }
 .product .product-boxes{
     grid-template-columns: repeat(4 , minmax(230px , 1fr));
@@ -289,6 +288,7 @@ nav .user a i{
     background-color: #F6F8F9;
     padding: 8px 16px;
     border-radius: 6px 0 0 6px;
+    cursor: pointer;
 }
 .size-list li.active{
     font-weight: 600;
