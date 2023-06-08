@@ -28,7 +28,7 @@ html{
 }
 ::-webkit-scrollbar-thumb{
     background-image: var(--bgGradient);
-    border-radius: 0.5rem;
+    border-radius: 0.3rem;
 }
 ::selection{
     background-color: var(--orangeColor);
@@ -219,18 +219,17 @@ nav .user a i{
 .product .product-boxes .card .card-body{
     padding: 15px 0;
 }
-.product .product-boxes .card .card-body .info{
+.info{
     margin-bottom: 10px;
 }
-.product .product-boxes .card .card-body .info span{
+.info span{
     color: var(--darkColor);
     font-weight: 500;
     font-size: 18px;
     transition: var(--transition);
 }
-.product .product-boxes .card .card-body .info span:hover{
-    color: var(--orangeColor);
-    cursor: pointer;
+.info span:last-of-type{
+    color: var(--darkPink);
 }
 /* Start Shopping */
 .product-shopping{
@@ -244,7 +243,8 @@ nav .user a i{
     object-fit: cover;
 }
 .product-shopping_content .new-product{
-    background: #EEF0F2;
+    background-color: #EEF0F2;
+    color: var(--pinkColor);
     border-radius: 6px;
     font-weight: 600;
     font-size: 15px;
@@ -292,7 +292,9 @@ nav .user a i{
 }
 .size-list li.active{
     font-weight: 600;
-    background-color: #EEF0F2;
+    color: var(--whiteColor);
+    background-color: var(--pinkColor);
+    transition: var(--transition);
 }
 .cart-btn{
     outline: none;

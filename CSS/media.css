@@ -33,7 +33,7 @@
         line-height: 30px;
     }
     .product .product-boxes{
-        grid-template-columns: repeat(2 , 1fr);
+        grid-template-columns: repeat(3 , 1fr);
     }
     .product .product-boxes .card .card-img img {
         height: 180px;
