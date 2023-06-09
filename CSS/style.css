@@ -384,7 +384,7 @@ footer .row .about .social-icons a:hover{
     color: #212121;
 }
 form{
-    width: 470px;
+    width: min(470px , 100%);
     margin: auto;
     padding: 20px;
 }
