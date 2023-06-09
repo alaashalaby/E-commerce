@@ -38,7 +38,7 @@
     .product .product-boxes .card .card-img img {
         height: 180px;
     }
-    .product .product-boxes .card .card-body .info span {
+    .info span {
         font-size: 15px;
     }
     .description p{
@@ -52,9 +52,6 @@
     }
     .product-title{
         font-size: 34px;
-    }
-    .login{
-        height: 100vh;
     }
     .login_description{
         text-align: center;

@@ -70,6 +70,9 @@ a{
 .mt-40{
     margin-top: 40px;
 }
+.gap-5{
+    gap: 5px;
+}
 .gap-10{
     gap: 10px;
 }
@@ -111,7 +114,7 @@ img{
     bottom: -10px;
     transform: translate(-50%, -50%);
 }
-section{
+section,footer{
     background-color: #F9F9F9;
 }
 /* Start navbar */
@@ -140,14 +143,14 @@ nav.sticky{
         transform: translateY(0);
     }
 }
-nav .logo img{
+.logo img{
     width: 45px;
 }
-nav .logo p{
+.logo p{
     font-weight: 500;
     color: var(--orangeColor);
 }
-nav .logo p span{
+.logo p span{
     color: var(--pinkColor);
 }
 nav .user a i{
@@ -230,6 +233,50 @@ nav .user a i{
 }
 .info span:last-of-type{
     color: var(--darkPink);
+}
+/* footer */
+footer{
+    padding: 80px 0;
+}
+footer .row{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(280px , 1fr));
+    gap: 30px;
+}
+footer .footer__card .footer__card--desc{
+    margin-top: 20px;
+    color:#333;
+}
+footer .footer__card h3{
+    color:var(--darkPink);
+    margin-top: 10px;
+}
+footer .footer__card ul{
+    margin-top: 30px;
+}
+footer .footer__card ul li:not(:first-child){
+    padding-top: 10px;
+}
+footer .footer__card ul li a{
+    color:#333;
+}
+.social-icons a{
+    display: inline-block;
+    color: var(--whiteColor);
+    background: var(--pinkColor);
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 17px;
+}
+.social-icons a:not(:first-child){
+    margin-left: 10px;
+}
+footer .row .about .social-icons a:hover{
+    color: #fff;
+    background-color: var(--primaryColor);
 }
 /* Start Shopping */
 .product-shopping{
@@ -314,9 +361,9 @@ nav .user a i{
 }
 /* Start Login */
 .login{
-    padding: 90px 0;
+    padding: 50px 0;
 }
-.login .form-box h4{
+.login .login-info h4{
     font-family: 'Urbanist', sans-serif;
     font-weight: 500;
     font-size: 18px;
@@ -336,51 +383,67 @@ nav .user a i{
     margin-bottom: 20px;
     color: #212121;
 }
-.input-box{
-    margin: 30px 0;
-    padding: 20px 0;
-    border-bottom: 1px solid var(--orangeColor);
+form{
+    width: 470px;
+    margin: auto;
+    padding: 20px;
 }
-.input-box input{
-    border: none;
-    outline: none;
-    font-family: 'Urbanist', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    color: #212121;
-    background-color: transparent;
-    padding: 0 30px 0 6px;
+.input-box{
+    margin-bottom: 10px;
     position: relative;
 }
-.input-box i{
-    position: absolute;
-    right: 0;
-    color: var(--orangeColor);
-    cursor: pointer;
+.input-title{
+    display: block;
+    margin-bottom: 10px;
+    color: var(--darkColor);
 }
-.input-button button[type="submit"]{
+.input-box input[type="email"],
+.input-box input[type="password"]{
+    width: 100%;
+    outline: none;
+    background-color: transparent;
+    border-radius: 4px;
+    padding: 15px;
+    border: 1px solid var(--orangeColor);
+}
+.input-box input[type="checkbox"],label{
+    cursor: pointer;
+    accent-color: var(--darkYellow);
+}
+.input-box input[type="submit"]{
     border: none;
     outline: none;
-    cursor: pointer;
-    padding: 10px 130px;
-}
-.check-box label{
-    color: #212121;
-    font-family: 'Urbanist', sans-serif;
-}
-.check-box input[type="checkbox"]{
-    accent-color: var(--orangeColor);
-    vertical-align: middle;
-    margin-right: 6px;
+    width: 100%;
     cursor: pointer;
 }
-#error-msg{
-    color: red;
-    font-size: 15px;
+.input-box.success input{
+    border-color: #2ecc71;
+}
+.input-box.error input{
+    border-color: #e74c3c;
+}
+.input-box p{
+    color: #e74c3c;
+    margin: 6px 5px 0;
+    visibility: hidden;
+}
+.input-box.error p{
+    visibility: visible;
+}
+.input-box i{
+    display: inline-block;
     position: absolute;
-    top: 33%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 48px;
+    right: 10px;
+    visibility: hidden;
+}
+.input-box.success i.bx-check-circle{
+    color: #2ecc71;
+    visibility: visible;
+}
+.input-box.error i.bx-error{
+    color: #e74c3c;
+    visibility: visible;
 }
 /* =============== Back To Top ================== */
 .backToTop{
