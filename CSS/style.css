@@ -236,7 +236,8 @@ nav .user a i{
 }
 /* footer */
 footer{
-    padding: 80px 0;
+    padding-top: var(--paddingTop);
+    padding-bottom: var(--paddingBottom);
 }
 footer .row{
     display: grid;
@@ -277,6 +278,11 @@ footer .footer__card ul li a{
 footer .row .about .social-icons a:hover{
     color: #fff;
     background-color: var(--primaryColor);
+}
+.footer__bottom{
+    border-top: 1px solid #ccc;
+    margin-top: 38px;
+    padding-top: 20px;
 }
 /* Start Shopping */
 .product-shopping{
